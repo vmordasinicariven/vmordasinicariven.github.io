@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/css/materialize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="monstyle.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <title>Accueil</title>
+</head>
+
+<body>
+    <div id="header-container" class="header-container"></div>
+    <main>
+        <h3>Mon master CRN </h3>
+        <div class="row">
+            <!-- Zone d'image -->
+            <div class="col s12 m12 l6 xl6 center-align">
+                <img class="responsive-img custom-width svgImage" src="images/arbre.png" alt="analogie entre mon histoire personnelle et la croissance d'un arbre" >
+                <p class ="caption">Cliquer sur l'image pour l'agrandir</p>
+            </div>
+            <!-- Zone de texte -->
+            <div class="col s12 m12 l6 xl6">
+                <p>Bonjour, je m'appelle Valérie Mordasini-Cariven.
+                    <br>
+                    Ce site a été crée dans le cadre des évaluations du premier semestre de Master 2 Concepteur de Ressources Numériques Pédagogiques de l'Inspé de Toulouse.
+                    <br>
+                    J'ai commencé ma carrière au tournant des années 2000 comme enseignante de Sciences de la Vie et de la Terre. 10 ans plus tard, j'ai réussi le concours exigeant de l'agrégation
+                    puis je me suis investie dans les nouveaux enseignements du numérique : ICN, ISN. Nouvelles formations, dont le DIU "Enseigner l'informatique au lycée"". Je suis donc habilitée pour enseigner les Sciences du Numériques
+                    au lycée.
+                    <br>
+                    Depuis la rentrée 2020, je suis aussi Référente des Usages Pédagogiques du Numérique pour mon Etablissement. Je gère donc son ENT (Espace Numérique de Travail).
+                    <br>
+                    Ce parcours m'a amené à vouloir progresser dans mes pratiques pédagogiques et la réalisation de ressources numériques variées et de qualité.
+                    <br>
+                    Je me suis donc redevenue étudiante, suivant avec intérêt et motivation les enseignements du Master CRN, en parallèle de mes activités d'enseignante, à la rentrée 2022.
+                    <br>
+                    Ce master a nourri ma réflexion de l'orientation à donner à ma vie professionnelle. Je souhaite à présent exercer la fonction d'ingénieur techno-pédagogique, pour accompagner formateurs et enseigants forte de mon expérience professionnelle.
+                    <br>
+
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l12 xl12 center-align">
+                <p>
+                Vous découvrirez donc sur ce site les livrables des UE93 (Conception de Ressources Numériques)
+                et UE98 (Reportage Vidéo) dans la rubrique "Evaluations M2S1".
+                    <br>
+                    Dans la rubrique "Qui suis-je", est disponible mon portfolio (réalisé dans le cadre de l'UE95) et mes CV.
+                Un classique que vous pourrez télécharger et un vidéo,
+                en anglais réalisé dans le cadre de l'UE94 (Anglais professionnel).</p>
+            </div>
+        </div>
+
+        <h4> Bonne visite ! </h4>
+
+    </main>
+
+    <div id="footer-container" class="footer-container"></div>
+
+
+    <script>
+
+      $(document).ready(function() {
+          $("#header-container").load("header.html");
+          $("#footer-container").load("footer.html");
+          // Initialiser le dropdown
+          $('.dropdown-trigger').dropdown({hover: true});
+
+          // Initialiser le sidenav (menu hamburger)
+          $('.sidenav').sidenav();
+
+          $('.svgImage').click(function(){
+              // Ajoute ou supprime la classe 'zoomed' au clic
+              $(this).toggleClass('zoomed');
+          });
+
+          // Fermer l'image au clic à l'extérieur de l'image zoomée
+          $(document).mouseup(function(e) {
+              var container = $(".svgImage.zoomed");
+
+              // Si la cible du clic n'est pas l'image zoomée ou son contenu
+              if (!container.is(e.target) && container.has(e.target).length === 0) {
+                  container.removeClass('zoomed');
+              }
+          });
+
+      });
+    </script>
+
+</body>
+</html>
