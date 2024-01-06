@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/css/materialize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="monstyle.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <title>Reportage vidéo</title>
+</head>
+
+<body>
+<div id="header-container" class="header-container"></div>
+<main>
+        <h3>Reportage vidéo</h3>
+        <div class="row">
+            <div class="col s12 m10 offset-m1 center-align">
+                <p>Dans le cadre de l'UE98, nous avons été formés à la technique de réalisation de reportage vidéo et au montage avec le logiciel Adobe Première.
+                <br>Ce reportage a été réalisé dans le cadre de mon stage de master 2 à l'INU Champollion, lors de la journée de Valorisation des Initiatives Pédagogiques qui a eu lieu le jeudi 16 novembre 2023.</p>
+                <div class="video-container">
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/T7BddupyWaI"frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <h5>Les étapes du travail</h5>
+        <p>Cliquer sur une image pour l'agrandir</p>
+        <div class="row">
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/01_importation_premierrush_et_voixoff.png" alt="Image 1, importation premier rush et voix off">
+            </div>
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/02_amelioration_du_son.png" alt="Image 2, amélioration du son">
+            </div>
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/03_cadrage_rush_avant_depot_sur_timeline.png" alt="Image 3, délimation d'un rush">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/04_separation_voix_image.png" alt="Image 4, séparation voix image d'un rush">
+            </div>
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/05_floutage_visage.png" alt="Image 5">
+            </div>
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/06_floutage_visage_bis.png" alt="Image 6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/07_choix_rush_illustration.png"" alt="Image 7">
+            </div>
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/08_insertion_bandeaux.png" alt="Image 8">
+            </div>
+            <div class="col s12 m4">
+                <img class="materialboxed responsive-img" src="images/reportage/09_soustitrages.png" alt="Image 9">
+            </div>
+
+
+            <div class="row">
+                <div class="col s12 center ">
+                    <a href="images/reportage/reportage.zip" download="images_reportage.zip" class="btn waves-effect waves-light">Télécharger toutes les images</a>
+                </div>
+            </div>
+    </div>
+
+
+
+</main>
+
+<div id="footer-container" class="footer-container"></div>
+
+
+<script>
+    // Initialiser le dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+        $("#header-container").load("header.html");
+        $("#footer-container").load("footer.html");
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems);
+
+
+    });
+</script>
+
+</body>
+</html>

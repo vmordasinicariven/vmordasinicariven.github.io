@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Votre titre</title>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="nav-wrapper blue-grey darken-4 ">
+      <a href="index.html" class="brand-logo "><img src="images/logo.png" height="80" width="60"/></a>
+      <<ul id="nav-mobile" class="right hide-on-med-and-down ">
+      <li>
+        <a href="#" class="dropdown-trigger" data-target="dropdown1">Evaluations M2S1<i class="material-icons right">arrow_drop_down</i></a>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="UE93.html" class="custom-link">UE93 - CRN </a></li>
+          <li><a href="UE98.html" class="custom-link">UE98 - Reportage vidéo</a></li>
+
+        </ul>
+      </li>
+
+      <li>
+        <a href="#" class="dropdown-trigger" data-target="dropdown2">Qui suis-je ?<i class="material-icons right">arrow_drop_down</i></a>
+        <ul id="dropdown2" class="dropdown-content">
+          <li><a href="cv.html" class="custom-link">Curriculum Vitae</a></li>
+          <li><a href="portfolio.html" class="custom-link">Portfolio</a></li>
+        </ul>
+      </li>
+    </ul>
+      <!-- Afficher le menu au clic sur hamburger -->
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <!-- Navbar pour les petits écrans (menu hamburger) -->
+  <ul id="slide-out" class="sidenav">
+    <li ><p class="menuH">Evaluations M2S1</p>
+      <ul>
+        <li><a href="UE93.html" class="custom-link">UE93 - CRN </a></li>
+        <li><a href="UE98.html" class="custom-link">UE98 - Reportage vidéo</a></li>
+      </ul>
+    </li>
+    <li><p class="menuH">Qui suis-je ?</p></li>
+    <ul>
+      <li><a href="cv.html" class="custom-link">Curriculum Vitae</a></li>
+      <li><a href="portfolio.html" class="custom-link">Portfolio</a></li>
+    </ul>
+  </ul>
+</header>
+
+</body>
+<script>
+  $(document).ready(function() {
+    // Initialiser le dropdown
+    $('.dropdown-trigger').dropdown({hover: true});
+
+    // Initialiser le sidenav (menu hamburger)
+    $('.sidenav').sidenav();
+  });
+</script>
+</html>
+
+</body>
+</html>

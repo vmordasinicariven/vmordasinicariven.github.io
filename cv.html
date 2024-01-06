@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.1/dist/css/materialize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="monstyle.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <title>CV</title>
+</head>
+
+<body>
+    <div id="header-container" class="header-container"></div>
+    <main>
+        <h3>Curriculum Vitae</h3>
+
+        <div class="row">
+
+            <div class="col s12 m12 l6 xl6 center-align">
+                <h5>Mon cv classique à télécharger</h5>
+                <img class="svgImage responsive-img" src="images/CV_VMC.jpg" alt="cv classique à télécharger" >
+                <p class ="caption">Cliquer sur le CV pour l'agrandir</p>
+
+                <div class="row">
+                    <div class="col s12 center ">
+                        <a href="images/CV_VMC.pdf" download="cv_vmc.pdf" class="btn waves-effect waves-light">Télécharger le CV</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Zone de texte -->
+            <div class="col s12 m12 l6 xl6">
+                <h5>My video resume</h5>
+                    <iframe width="600" height="350" src="https://www.youtube.com/embed/Q_Dt83gkuyA" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="footer-container" class="footer-container"></div>
+
+
+    <script>
+        // Initialiser le dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            $("#header-container").load("header.html");
+            $("#footer-container").load("footer.html");
+            $('.svgImage').click(function(){
+                // Ajoute ou supprime la classe 'zoomed' au clic
+                $(this).toggleClass('zoomed');
+            });
+
+            // Fermer l'image au clic à l'extérieur de l'image zoomée
+            $(document).mouseup(function(e) {
+                var container = $(".svgImage.zoomed");
+
+                // Si la cible du clic n'est pas l'image zoomée ou son contenu
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    container.removeClass('zoomed');
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

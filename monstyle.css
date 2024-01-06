@@ -1,0 +1,92 @@
+
+/*pour toutes les pages */
+body{
+    background-color : #263238 ;
+    font-family : "Comic Sans MS";
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+    
+
+
+h1,h2,h3,h4,h5,p,.caption, .col.s12.m6 {
+    text-align : center ;
+    color : #fde7dd;
+}
+
+.caption {
+    font-style: italic ;
+}
+
+span {
+    margin-right: 50px; /* Ajoutez la valeur d'espace souhaitée */
+}
+
+footer {
+    position: relative;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+}
+
+.sidenav-title {
+    font-weight: bold;
+    color: #fff;
+}
+
+.menuH {
+    background-color: #D0BFB7FF;
+}
+
+@media only screen and (min-width: 992px) {
+    .custom-width {
+        width: 350px;
+        height: auto; /* Ajuste la hauteur de manière proportionnelle */
+    }
+
+    .custom-link {
+        color: #fde7dd;
+    }
+
+    /* Styles pour le lien visité */
+    .custom-link:visited {
+        color: #887269;
+    }
+
+}
+
+.position{
+    text-align: center;
+}
+
+    .svgImage {
+        max-height: 480px; /* Ajustez la valeur selon votre préférence */
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+
+    }
+
+    /* Ajoutez un style pour le zoom */
+   .svgImage.zoomed {
+        transform: scale(2); /* Ajustez la valeur selon votre préférence */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 1000;
+    }
+
+
+#tricot-image {
+    max-width: 100%; /* ou une valeur spécifique en pixels, pourcentage, etc. */
+    max-height: 400px;
+}
+
+
