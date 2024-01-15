@@ -62,9 +62,6 @@ footer {
     color: #fff;
 }
 
-.menuH {
-    background-color: #D0BFB7FF;
-}
 
 @media only screen and (min-width: 992px) {
     .custom-width {
@@ -80,6 +77,7 @@ footer {
     .custom-link:visited {
         color: #887269;
     }
+
 
 }
 
