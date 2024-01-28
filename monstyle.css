@@ -3,6 +3,7 @@
 body{
     background-color : #263238 ;
     font-family : "Comic Sans MS";
+    font-size : larger;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -13,11 +14,37 @@ main {
     flex: 1 0 auto;
 }
     
-
+.menuH{
+    color :#999;
+}
 
 h1,h2,h3,h4,h5,p,.caption, .col.s12.m6 {
     text-align : center ;
     color : #fde7dd;
+}
+
+.centered-list {
+    color : #fde7dd;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.material-icons {
+    vertical-align: middle;
 }
 
 .caption {
@@ -26,6 +53,12 @@ h1,h2,h3,h4,h5,p,.caption, .col.s12.m6 {
 
 span {
     margin-right: 50px; /* Ajoutez la valeur d'espace souhaitée */
+}
+
+.centered-list {
+    text-align: center; /* Aligner le texte au centre */
+    margin: 0; /* Supprimer la marge par défaut du navigateur */
+    padding: 0; /* Supprimer le rembourrage par défaut du navigateur */
 }
 
 .icones {
